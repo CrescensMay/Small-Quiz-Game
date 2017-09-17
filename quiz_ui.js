@@ -24,8 +24,8 @@ var QuizUI = {
         gameOverHTML += "<h2> Your score is: " + quiz.score + "/" + quiz.questions.length + "</h2>";
         gameOverHTML += "<h3>Reload the page to replay</h3>";
         if(quiz.score >= 12 && quiz.score < 15){
-          gameOverHTML += "<div><p>good</p></div>";
-          setTimeout(function(){alert("It is time!")});
+          gameOverHTML += "<div><p>Good</p></div>";
+          setTimeout(function(){alert("Close to check the result!")});
           $(function(){
             $("img").attr({
               src:"star2.jpg",
@@ -35,8 +35,8 @@ var QuizUI = {
             $("img").dialog();
           });
         }else if(quiz.score >= 15 && quiz.score < 18){
-          gameOverHTML += "<p>very good</p>";
-          setTimeout(function(){alert("It is time!")});
+          gameOverHTML += "<p>Very Good</p>";
+          setTimeout(function(){alert("Close to check the result!")});
           $(function(){
             $("img").attr({
               src:"star3.jpeg",
@@ -46,8 +46,8 @@ var QuizUI = {
             $("img").dialog();
           });
         }else if(quiz.score >= 18){
-          gameOverHTML += "<div><p>excellent</p></div>";
-          setTimeout(function(){alert("It is time!")});
+          gameOverHTML += "<div><p>Excellent</p></div>";
+          setTimeout(function(){alert("Close to check the result!")});
           $(function(){
             $("img").attr({
               src:"stargold.jpeg",
@@ -55,11 +55,10 @@ var QuizUI = {
             });
             // $("img").attr('title',"EXCELLENT");
             $("img").dialog();
-            $("img").toggleClass('flip');
           });
         }else{
-          gameOverHTML += "<div><p>failed</p></div>";
-          setTimeout(function(){alert("It is time!")});
+          gameOverHTML += "<div><p>Failed</p></div>";
+          setTimeout(function(){alert("Close to check the result!")});
           $(function(){
             $("img").attr({
               src:"star1.jpeg",
