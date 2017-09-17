@@ -7,6 +7,10 @@ function Quiz(questions) {
 Quiz.prototype.guess = function(answer) {
     if(this.getCurrentQuestion().isCorrectAnswer(answer)) {
         this.score++;
+    }else{
+      $(document).ready(function(){
+        alert("sorry the answer was " + this.getCurrentQuestion().isCorrectAnswer(answer));
+      });
     }
     this.currentQuestionIndex++;
 };

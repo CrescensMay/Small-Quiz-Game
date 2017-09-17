@@ -24,7 +24,7 @@ var QuizUI = {
         gameOverHTML += "<h2> Your score is: " + quiz.score + "/" + quiz.questions.length + "</h2>";
         gameOverHTML += "<h3>Reload the page to replay</h3>";
         if(quiz.score >= 12 && quiz.score < 15){
-          gameOverHTML += "<div><p>Good</p></div>";
+          gameOverHTML += "<p>Grade: Good</p>";
           setTimeout(function(){alert("Close to check the result!")});
           $(function(){
             $("img").attr({
@@ -35,7 +35,7 @@ var QuizUI = {
             $("img").dialog();
           });
         }else if(quiz.score >= 15 && quiz.score < 18){
-          gameOverHTML += "<p>Very Good</p>";
+          gameOverHTML += "<p>Grade: Very Good</p>";
           setTimeout(function(){alert("Close to check the result!")});
           $(function(){
             $("img").attr({
@@ -46,7 +46,7 @@ var QuizUI = {
             $("img").dialog();
           });
         }else if(quiz.score >= 18){
-          gameOverHTML += "<div><p>Excellent</p></div>";
+          gameOverHTML += "<p>Grade: Excellent</p>";
           setTimeout(function(){alert("Close to check the result!")});
           $(function(){
             $("img").attr({
@@ -57,7 +57,7 @@ var QuizUI = {
             $("img").dialog();
           });
         }else{
-          gameOverHTML += "<div><p>Failed</p></div>";
+          gameOverHTML += "<p>Grade: Failed</p>";
           setTimeout(function(){alert("Close to check the result!")});
           $(function(){
             $("img").attr({
@@ -81,7 +81,7 @@ var QuizUI = {
     guessHandler: function(id, guess) {
         var button = document.getElementById(id);
         button.onclick = function() {
-            quiz.guess(guess);
+            quiz.guess(guess)
             QuizUI.displayNext();
         }
     },

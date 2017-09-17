@@ -3,7 +3,13 @@
   content: "";
   display: table;
   clear: both; }
-
+.timer{
+  width: 50%;
+  background-color: rgb(61, 56, 91);
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+}
 .srt, .form__label--hidden {
   border: 0;
   clip: rect(0 0 0 0);
