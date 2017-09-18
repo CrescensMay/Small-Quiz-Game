@@ -2,10 +2,10 @@ var QuizUI = {
     displayNext: function () {
         if (quiz.hasEnded()) {
             this.displayScore();
-        } else {
-            this.displayQuestion();
-            this.displayChoices();
-            this.displayProgress();
+        }else{
+          this.displayQuestion();
+          this.displayChoices();
+          this.displayProgress();
         }
     },
     displayQuestion: function() {
@@ -64,11 +64,7 @@ var QuizUI = {
               src:"star1.jpeg",
               alt:"failed"
             });
-            // $("img").attr('title',"FAILED");
             $("img").dialog();
-            // $("img").mouseout(function(){$(this).css({
-            //   'transform':'rotate(100deg)'
-            // });});
           });
         }
         gameOverHTML += "<img src='gold.jpg'/>"

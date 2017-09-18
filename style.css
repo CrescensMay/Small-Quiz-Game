@@ -10,6 +10,11 @@
   margin: auto;
   font-size: 20px;
 }
+#start{
+  position: relative;
+  bottom: 20.7px;
+  left: 19em;
+}
 .srt, .form__label--hidden {
   border: 0;
   clip: rect(0 0 0 0);
